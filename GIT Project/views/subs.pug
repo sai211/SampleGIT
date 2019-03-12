@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1= title
+    p Page for #{title}
+    form(method='POST' action='/subs')
+        div.form-group
+            label(for='firstval') First Value
+            input.form-control(type='number' id='firstval' placeholder='firstval' name='firstval' value=firstval)
+        div.form-group
+            label(for='secondval') Second Value
+            input.form-control(type='number' id='secondval' placeholder='secondval' name='secondval' value=secondval)
+        button.btn.btn-primary(type='submit') Calculate
+        div.form-group
+            label(for='answer') Answer
+            input.form-control(type='number' id='answer' placeholder='answer' name='answer' value=answer)
